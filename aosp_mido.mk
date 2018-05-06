@@ -17,9 +17,12 @@
 $(call inherit-product, device/xiaomi/mido/full_mido.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/common.mk)
 
-PRODUCT_NAME := lineage_mido
+# Include Bootanimation configuration
+TARGET_BOOT_ANIMATION_RES := 1080
+
+PRODUCT_NAME := aosp_mido
 BOARD_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
