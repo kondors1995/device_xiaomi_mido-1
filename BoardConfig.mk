@@ -25,10 +25,8 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Kernel
 TARGET_KERNEL_CONFIG := mido_defconfig
-TARGET_KERNEL_CLANG_VERSION := 7.0
-TARGET_KERNEL_CLANG_PATH := $(ANDROID_BUILD_TOP)/prebuilts/clang/host/$(HOST_OS)-x86/$(TARGET_KERNEL_CLANG_VERSION)/bin
-KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
-
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-8.x/bin
 
 # Lineage Hardware
 BOARD_HARDWARE_CLASS += \
